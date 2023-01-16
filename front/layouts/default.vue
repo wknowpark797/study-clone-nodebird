@@ -38,8 +38,17 @@
             </v-toolbar>
         </nav>
 
-        <nuxt />
-
+        <!-- Login, Content -->
+        <v-row no-gutters>
+            <v-col cols="12" md="4">
+                Login
+            </v-col>
+            <v-col cols="12" md="8">
+                <nuxt />
+                <!-- <router-view /> -->
+            </v-col>
+        </v-row>
+        
     </v-app>
 </template>
 

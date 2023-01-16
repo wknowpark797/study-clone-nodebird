@@ -1,15 +1,46 @@
 <template>
-    <div>
+    <v-app>
+
+        <!-- Navigation -->
         <nav>
-            <nuxt-link to="/">Home</nuxt-link>
-            <nuxt-link to="/profile">Profile</nuxt-link>
-            <nuxt-link to="/signup">Signup</nuxt-link>
-            <!-- <router-link></router-link> -->
+            <v-toolbar dark color="blue">
+                <v-toolbar-title>
+                    <nuxt-link 
+                        to="/" 
+                        :style="{ color: '#FFF', textDecoration: 'none' }">
+                        NodeBird
+                    </nuxt-link>
+                </v-toolbar-title>
+
+                <v-spacer />
+
+                <v-toolbar-items>
+                    <v-text-field
+                        label="검색"
+                        hide-details
+                        prepend-icon="mdi-magnify"
+                        :style="{ display: 'flex', alignItems: 'center' }" />
+
+                    <v-btn
+                        text
+                        nuxt to="/profile"
+                        :style="{ display: 'flex', alignItems: 'center' }">
+                        <div>프로필</div>
+                    </v-btn>
+
+                    <v-btn
+                        text
+                        nuxt to="/signup"
+                        :style="{ display: 'flex', alignItems: 'center' }">
+                        <div>회원가입</div>
+                    </v-btn>
+                </v-toolbar-items>
+            </v-toolbar>
         </nav>
 
         <nuxt />
-        <!-- router-view -->
-    </div>
+
+    </v-app>
 </template>
 
 <script>

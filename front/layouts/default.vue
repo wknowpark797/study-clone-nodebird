@@ -41,11 +41,10 @@
         <!-- Login, Content -->
         <v-row no-gutters>
             <v-col cols="12" md="4">
-                Login
+                <LoginForm />
             </v-col>
             <v-col cols="12" md="8">
                 <nuxt />
-                <!-- <router-view /> -->
             </v-col>
         </v-row>
         
@@ -53,7 +52,12 @@
 </template>
 
 <script>
+    import LoginForm from '~/components/LoginForm';
+
     export default {
+        components: {
+            LoginForm
+        },
         data() {
             return {
 

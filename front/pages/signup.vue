@@ -83,6 +83,11 @@
                 ]
             }
         },
+        head() {
+            return {
+                title: '회원가입'
+            }
+        },
         methods: {
             onSubmitForm() {
                 if(this.$refs.form.validate()) {
@@ -90,11 +95,6 @@
                 } else {
                     alert('폼이 유효하지 않습니다.');
                 }   
-            }
-        },
-        head() {
-            return {
-                title: '회원가입'
             }
         }
     }

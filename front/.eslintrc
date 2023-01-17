@@ -1,0 +1,23 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2019,
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:vue/recommended"
+    ],
+    "plugins": [],
+    "rules": {
+        "vue/html-indent": "off",
+        "vue/multiline-html-element-content-newline": "off",
+        "vue/html-closing-bracket-newline": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/multi-word-component-names": "off"
+    }
+}
+
+// extendes는 plugins를 모아둔 것

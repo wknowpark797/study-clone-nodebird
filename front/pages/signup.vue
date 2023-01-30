@@ -91,9 +91,16 @@
         methods: {
             onSubmitForm() {
                 if(this.$refs.form.validate()) {
-                    alert('회원가입 시도');
-                } else {
-                    alert('폼이 유효하지 않습니다.');
+                    this.$store.dispatch('users/signUp', {
+                        email: this.email,
+                        nickname: this.nickname
+                    })
+                        .then(() => {
+                            this.$router.push('/');
+                        })
+                        .catch(() => {
+                            alert('회원가입 실패');
+                        });
                 }   
             }
         }

@@ -40,8 +40,10 @@
     </v-container>
     <v-container v-else>
         <v-card>
-            {{ me.nickname }}님 로그인 되었습니다.
-            <v-btn @click="onLogout">로그아웃</v-btn>
+            <v-container>
+                {{ me.nickname }}님 로그인 되었습니다.
+                <v-btn @click="onLogout">로그아웃</v-btn>
+            </v-container>
         </v-card>
     </v-container>
 </template>

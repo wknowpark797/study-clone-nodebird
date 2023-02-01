@@ -50,10 +50,12 @@
             ...mapState('users', ['me']),
         },
         methods: {
-            onChangeTextarea() {
-                this.hideDetails = true;
-                this.successMessages = '';
-                this.success = false;
+            onChangeTextarea(value) {
+                if(value.length) {
+                    this.hideDetails = true;
+                    this.successMessages = '';
+                    this.success = false;
+                }
             },
             onSubmitForm() {
                 if(this.$refs.form.validate()) {
